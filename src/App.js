@@ -1,5 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Index from "./components/Index";
+import Perfil from "./components/Perfil";
+import Carrito from "./components/Carrito";
+import { Routes, Route } from 'react-router-dom';
+import pages from './pages/Perfil';
 
 function App() {
   return (
@@ -17,6 +22,16 @@ function App() {
         >
           Learn React
         </a>
+        {/* Mis componentes */}
+        <Index />
+        <Perfil />
+        <Carrito />
+        {/* Mi pagina aux */}
+        <Routes>
+          <Route path='/' element={<Perfil />}>
+
+          </Route>
+        </Routes>
       </header>
     </div>
   );
